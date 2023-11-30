@@ -576,7 +576,6 @@ public class ImageFramework {
 ```
 
 ### Conclusion
-Dans ce TD j’ai appris comment utiliser les designs patterns. J’ai utilisé différents designs patterns comme: **Singleton**, **Strategy**, **Adapter**, **Template Method**, **Observer**, **Composite**, **Decorator**,etc. 
-
+Dans le cadre de ce TD, j'ai acquis une compréhension approfondie de l'utilisation des design patterns. Ma pratique a englobé une diversité de design patterns tels que Singleton, Strategy, Adapter, Template Method, Observer, Composite, Decorator, et bien d'autres encore. Cette expérience m'a permis de découvrir comment ces patterns peuvent être appliqués de manière efficace pour résoudre divers problèmes de conception logicielle, améliorant ainsi la flexibilité, la réutilisabilité et la maintenabilité de mon code.
 
 
