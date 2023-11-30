@@ -5,7 +5,7 @@ suivantes :
 
 1 - Une figure peut être soit un cercle, un rectangle ou un groupe de figures.
 ### Class Diagram
-![img.png](img.png)
+![img.png](src/main/java/ma/enset/captures/img.png)
 
 ### Implementation
 #### Figure
@@ -73,7 +73,7 @@ d’implémenter les deux parties manquantes de cet algorithme et on voudrait au
 l’application cliente puisse instancier une implémentation concrète du plugin sans connaitre
 sa classe d’implémentation.
 ### Class Diagram
-![img_1.png](img_1.png)
+![img_1.png](src/main/java/ma/enset/captures/img_1.png)
 
 ### Implementation
 #### TemplateClass
@@ -127,7 +127,7 @@ traitement() ». On voudrait rattacher à ce composant des responsabilités supp
 sans modifier son code source. C'est-à-dire envelopper l’exécution de la méthode traitement
 par d’autres traitements avant et après son exécution.
 ### Class Diagram
-![img_2.png](img_2.png)
+![img_2.png](src/main/java/ma/enset/captures/img_2.png)
 
 ### Implementation
 #### Component
@@ -186,7 +186,7 @@ On voudrait que les objets de l’environnement du jeu (Couloir, Caméra et Gard
 informés à chaque fois que le score du joueur change tout en gardant un couplage faible entre
 la classe Joueur et les autres classes.
 ### Class Diagram
-![img_3.png](img_3.png)
+![img_3.png](src/main/java/ma/enset/captures/img_3.png)
 
 ### Implementation
 #### Observable
@@ -379,7 +379,7 @@ Pour l’opération de compression, on souhaite définir le squelette de l’alg
 compression et déléguer les détails de cet algorithme aux sous classes.
 
 ### Class Diagram
-![img_4.png](img_4.png)
+![img_4.png](src/main/java/ma/enset/captures/img_4.png)
 
 Dans cette exercice j’ai utilisé dans ce cas 4 designs patterns : **Singleton**, **Strategy**, **Adapter**, **Template Method**.
 
