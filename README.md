@@ -8,13 +8,13 @@ suivantes :
 ![img.png](src/main/java/ma/enset/captures/img.png)
 
 ### Implementation
-#### Figure
+#### Figure class
 ```java
 public abstract class Figure {
     public abstract double calculerAire();
 }
 ```
-#### Cercle
+#### Cercle class
 ```java
 public class Cercle extends Figure {
     private double rayon;
@@ -29,7 +29,7 @@ public class Cercle extends Figure {
     }
 }
 ```
-#### Rectangle
+#### Rectangle class
 ```java
 public class Rectangle extends Figure {
     private double largeur;
@@ -46,7 +46,8 @@ public class Rectangle extends Figure {
     }
 }
 ``` 
-#### Groupe
+#### Groupe class
+This class is a composite of figures.
 ```java
 public class Group extends Figure {
     public List<Figure> figures = new ArrayList<>();
@@ -130,13 +131,13 @@ par d’autres traitements avant et après son exécution.
 ![img_2.png](src/main/java/ma/enset/captures/img_2.png)
 
 ### Implementation
-#### Component
+#### Component class
 ```java
 public abstract class Component {
     abstract void traitement();
 }
 ```
-#### Decorator
+#### Decorator class
 ```java
 public abstract class Decorator extends Component {
     protected Component component;
@@ -146,7 +147,7 @@ public abstract class Decorator extends Component {
     }
 }
 ```
-#### ComponentImpl
+#### ComponentImpl class
 ```java
 public class ComponentImpl extends Component {
     @Override
@@ -155,7 +156,7 @@ public class ComponentImpl extends Component {
     }
 }
 ```
-#### DecoratorBefore
+#### DecoratorBefore class
 ```java
 public class DecoratorBefore extends Decorator {
     public DecoratorBefore(Component component) {
@@ -168,7 +169,7 @@ public class DecoratorBefore extends Decorator {
     }
 }
 ```
-#### DecoratorAfter
+#### DecoratorAfter class
 ```java
 public class DecoratorAfter extends Decorator {
     public DecoratorAfter(Component component) {
@@ -189,7 +190,7 @@ la classe Joueur et les autres classes.
 ![img_3.png](src/main/java/ma/enset/captures/img_3.png)
 
 ### Implementation
-#### Observable
+#### Observable interface
 This interface represents the Observable in the Observer pattern. It defines the methods that are used to attach and detach observers to the Observable object. It also defines the method that is used to notify the observers when the state of the Observable object changes.
 ```java
 public interface Observable {
@@ -200,14 +201,14 @@ public interface Observable {
     void notifyObservers();
 }
 ```
-#### Observer
+#### Observer interface
 This interface represents the Observer in the Observer pattern. It defines the method that is called by the Observable object when its state changes.
 ```java
 public interface Observer {
     void update(Observable observable);
 }
 ```
-#### Joueur
+#### Joueur class
 ```java
 public class Joueur implements Observable {
     private int score;
@@ -244,7 +245,7 @@ public class Joueur implements Observable {
 
 }
 ```
-#### Couloir
+#### Couloir class
 ```java
 public class Couloir implements Observer {
     @Override
@@ -280,7 +281,7 @@ public class Couloir implements Observer {
     }
 }
 ```
-#### Camera
+#### Camera class
 ```java
 public class Camera implements Observer {
     @Override
@@ -323,7 +324,7 @@ public class Camera implements Observer {
     }
 }
 ```
-#### Gardien
+#### Gardien class
 ```java
 public class Gardien implements Observer {
     @Override
@@ -389,7 +390,7 @@ Dans cette exercice j’ai utilisé dans ce cas 4 designs patterns : **Singleton
 
 ### Implementation
 #### Adapter : 
-* FiltrageAdapter
+* FiltrageAdapter class
 ```java
 public class FiltrageAdapter implements FilterStrategy {
     private ImplNonStandard implNonStandard;
@@ -400,7 +401,7 @@ public class FiltrageAdapter implements FilterStrategy {
     }
 }
 ```
-* ImplNonStandard
+* ImplNonStandard class
 ```java
 public class ImplNonStandard {
     public int[] applyFilter(String filterName, int[] data) {
@@ -418,13 +419,13 @@ public class ImplNonStandard {
 }
 ```
 #### Strategy :
-* FilterStrategy
+* FilterStrategy interface
 ```java
 public interface FilterStrategy {
     int[] filter(int[] data);
 }
 ```
-* FilterImpl1
+* FilterImpl1 class
 ```java
 public class FiltrageImpl1 implements FilterStrategy {
     @Override
@@ -438,7 +439,7 @@ public class FiltrageImpl1 implements FilterStrategy {
     }
 }
 ```
-* FilterImpl2
+* FilterImpl2 class
 ```java
 public class FiltrageImpl2 implements FilterStrategy {
     @Override
@@ -453,7 +454,7 @@ public class FiltrageImpl2 implements FilterStrategy {
 }
 ```
 #### Template Method :
-* ImageCompressionAlgorithm
+* ImageCompressionAlgorithm class
 ```java
 public abstract class ImageCompressionAlgorithm {
     public int[] compress(int[] data) {
@@ -474,7 +475,7 @@ public abstract class ImageCompressionAlgorithm {
 
 }
 ```
-* CustomImageCompressionAlgorithm1
+* CustomImageCompressionAlgorithm1 class
 ```java
 public class CustomImageCompressionAlgorithm1 extends ImageCompressionAlgorithm {
     @Override
@@ -505,7 +506,7 @@ public class CustomImageCompressionAlgorithm1 extends ImageCompressionAlgorithm 
     }
 }
 ```
-* CustomImageCompressionAlgorithm2
+* CustomImageCompressionAlgorithm2 class
 ```java
 public class CustomImageCompressionAlgorithm2 extends ImageCompressionAlgorithm {
     @Override
@@ -536,7 +537,7 @@ public class CustomImageCompressionAlgorithm2 extends ImageCompressionAlgorithm 
     }
 }
 ```
-#### ImageFramework
+#### ImageFramework class
 ```java
 public class ImageFramework {
     private int[] image;
