@@ -575,5 +575,7 @@ public class ImageFramework {
 ```
 
 ### Conclusion
-Dans ce TD j’ai appris comment utiliser les designs patterns dans la conception et le développement d’un Framework. J’ai utilisé dans ce cas 4 designs patterns : **Singleton**, **Strategy**, **Adapter**, **Template Method**, **Observer**, **Composite**, **Decorator**,etc.
+Dans ce TD j’ai appris comment utiliser les designs patterns. J’ai utilisé différents designs patterns comme: **Singleton**, **Strategy**, **Adapter**, **Template Method**, **Observer**, **Composite**, **Decorator**,etc. 
+
+
 
